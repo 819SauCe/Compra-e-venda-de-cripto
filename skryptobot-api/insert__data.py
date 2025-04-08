@@ -11,7 +11,7 @@ except ImportError as e:
     os.system(f'pip install {e.name}')
     exit(1)
 
-def main():
+def insert_data():
     load_dotenv()
     url = os.getenv("SUPA_BASE_URL")
     key = os.getenv("SUPA_BASE_KEY")

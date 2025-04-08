@@ -12,7 +12,7 @@ except ImportError as e:
     os.system(f'pip install {e.name}')
     exit(1)
 
-def main():
+def fetch_and_store_data():
     url: str = os.environ.get("SUPA_BASE_URL")
     key: str = os.environ.get("SUPA_BASE_KEY")
     supabase: Client = create_client(url, key)
