@@ -8,11 +8,12 @@ except ImportError as e:
     os.system('pip install {error.name}')
     exit(1)
 
-load_dotenv()
-app = FastAPI()
-url = os.getenv("SUPA_BASE_URL")
-key = os.getenv("SUPA_BASE_KEY")
+def main():
+    load_dotenv()
+    app = FastAPI()
+    url = os.getenv("SUPA_BASE_URL")
+    key = os.getenv("SUPA_BASE_KEY")
 
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
+    @app.get("/")
+    async def root():
+        return {"message": "Hello World"}

@@ -1,0 +1,12 @@
+python-dotenv
+scikit-learn
+requests
+pendulum
+supabase
+sklearn
+fastapi
+openai
+dotenv
+time
+json
+os

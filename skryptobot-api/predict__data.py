@@ -12,17 +12,18 @@ except ImportError as e:
     os.system(f'pip install {e.name}')
     exit(1)
 
-url: str = os.environ.get("SUPA_BASE_URL")
-key: str = os.environ.get("SUPA_BASE_KEY")
-supabase: Client = create_client(url, key)
+def main():
+    url: str = os.environ.get("SUPA_BASE_URL")
+    key: str = os.environ.get("SUPA_BASE_KEY")
+    supabase: Client = create_client(url, key)
 
-def execut_calc():
-    result = supabase.table("Cripto").select("*", count="exact").execute()
-    lines = result.count
-    print(lines)
+    def execut_calc():
+        result = supabase.table("Cripto").select("*", count="exact").execute()
+        lines = result.count
+        print(lines)
 
-    for line in range(lines):
-        cripto_line = result.data[line]
-        print(cripto_line)
+        for line in range(lines):
+            cripto_line = result.data[line]
+            print(cripto_line)
 
-execut_calc()
+    execut_calc()
