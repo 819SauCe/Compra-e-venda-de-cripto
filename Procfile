@@ -1,1 +1,1 @@
-web: python -m uvicorn skryptobot-api.app:app --host 0.0.0.0 --port $PORT
+web: python skryptobot-api/app.py
