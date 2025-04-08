@@ -5,3 +5,4 @@ pendulum
 supabase
 fastapi
 openai
+uvicorn
